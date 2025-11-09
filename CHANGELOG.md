@@ -32,7 +32,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
     - Shows aircraft list with N-numbers, make/model, year, location
     - Filter by state: `--state CA`
     - Export to CSV: `--export fleet.csv`
-    - Limit results: `--limit 20`
+    - Limit results: `--limit 20` (default: unlimited)
+    - Warning shown when results are truncated by limit
   - `hangar update` - Run full pipeline (fetch → normalize → publish) in one command
   - `hangar status` - Check data age and show warning if stale (30+ days)
 - **Data age warnings:**

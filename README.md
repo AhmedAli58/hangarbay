@@ -45,14 +45,14 @@ Hangarbay downloads FAA aircraft registration data, normalizes it into typed tab
 
 ## Features
 
-### N-Number Lookup
+### N-Number lookup
 Look up any aircraft registration with decoded status codes and human-readable output:
 
 ```bash
 hangar search N221LA
 ```
 
-### Fleet Search
+### Fleet search
 Find all aircraft owned by a person or company:
 
 ```bash

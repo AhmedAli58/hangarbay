@@ -492,7 +492,7 @@ def fleet(
     owner: str,
     state: Optional[str] = typer.Option(None, "--state", help="Filter by state (e.g., CA, TX)"),
     export: Optional[Path] = typer.Option(None, "--export", help="Export results to CSV file"),
-    limit: int = typer.Option(100, "--limit", help="Maximum results to show (0 for all)"),
+    limit: int = typer.Option(0, "--limit", help="Limit results (0 for all, default: unlimited)"),
     skip_age_check: bool = typer.Option(False, "--skip-age-check", help="Skip data age warning"),
 ):
     """Find all aircraft owned by a person or company.
@@ -555,10 +555,12 @@ def fleet(
         
         query += " ORDER BY a.n_number"
         
+        # Apply SQL limit only if specified
+        sql_query = query
         if limit > 0:
-            query += f" LIMIT {limit}"
+            sql_query += f" LIMIT {limit}"
         
-        result = conn.execute(query, params).fetchdf()
+        result = conn.execute(sql_query, params).fetchdf()
         
         if len(result) == 0:
             console.print(f"[yellow]No aircraft found for owner: {owner}[/yellow]")
@@ -628,9 +630,12 @@ def fleet(
         console.print(table)
         
         if len(result) > display_limit:
-            console.print(f"\n[dim]Showing first {display_limit} of {len(result)} aircraft[/dim]")
+            console.print(f"\n[dim]Showing first {display_limit} of {len(result)} aircraft (use --limit to control query size)[/dim]")
         
         console.print(f"\n[dim]{len(result)} aircraft found[/dim]")
+        
+        if limit > 0 and len(result) == limit:
+            console.print(f"[yellow]⚠ Results limited to {limit}. Use --limit 0 for all results.[/yellow]")
         
         # Export if requested
         if export:
