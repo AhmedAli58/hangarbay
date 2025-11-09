@@ -241,8 +241,7 @@ def fleet(
             a.reg_status,
             o.owner_name,
             o.city,
-            o.state,
-            o.zip5
+            o.state
         FROM aircraft_decoded a
         JOIN owners_clean o ON a.n_number = o.n_number
         WHERE (
