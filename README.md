@@ -14,7 +14,7 @@ This is a tool built for researchers, data journalists and aviation analysts who
 
 ```python
 # Install
-pip install hangarbay  # (coming soon to PyPI)
+pip install hangarbay
 
 # One-time setup
 import hangarbay as hb
@@ -47,6 +47,10 @@ print(f"Data is {info['age_days']} days old")
 # Clone and install
 git clone https://github.com/stiles/hangarbay.git
 cd hangarbay
+
+# Recommended: use a virtual environment (uv, venv, conda, etc.)
+uv venv && source .venv/bin/activate  # or: python -m venv .venv && source .venv/bin/activate
+
 pip install -e ".[dev]"
 
 # Run the full pipeline (~2 minutes)

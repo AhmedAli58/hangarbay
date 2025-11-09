@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2025-11-09
+
 ### Changed
 - **Major UI improvements** to `hangar search` output:
   - Owner and location now shown first (most interesting info at top)
@@ -22,6 +24,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Added comprehensive code lookups based on official FAA data dictionary (`data/reference/ardata.txt`)
   - 41 status codes (including all pending, expired, revoked states)
   - 40+ certificate type codes (Standard, Experimental, Light Sport, Restricted, etc.)
+- **Improved `hangar fleet` output**:
+  - Added Owner column to table (essential for OR searches showing name variations)
+  - Removed confusing Fleet Summary section
+  - Summary stats moved to bottom (after table)
+  - Shows "Unique owners" count when > 1 (helpful for multi-airline searches)
+  - Cleaner header format
 
 ### Added
 - **🐍 Python API for notebooks and scripts:**
@@ -36,6 +44,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   - All functions return pandas DataFrames
   - Auto-downloads data on first use with helpful messages
   - Data stored in `~/.hangarbay/data/` by default (configurable with `set_data_dir()`)
+  - `quiet=True` parameter for `load_data()` to suppress output in notebooks
+- **Example Jupyter notebook** (`examples/lapd_fleet_analysis.ipynb`)
+  - Demonstrates Python API usage for fleet analysis
+  - Shows LAPD and LA City government aircraft analysis
+  - Includes N-number pattern interpretation (FD, WP, LA suffixes)
+  - Examples of wildcard search, filtering and CSV export
 - **New commands:**
   - `hangar fleet <owner>` - Find all aircraft owned by a person or company
     - Case-insensitive search with wildcards (automatic `%term%` wrapping)
@@ -65,6 +79,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 - `hangar search` now accepts N-numbers with or without the "N" prefix (e.g., both "N221LA" and "221LA" work)
 - Case-insensitive search (e.g., "n100", "N100", "100" all work)
+- Fixed `status()` to correctly read row counts from nested metadata
+- Fixed column name references in `fleet()` and `search()` queries
+
+### Documentation
+- All headers converted to sentence case across all docs
+- Removed Oxford commas from documentation
+- Added `examples/README.md` with notebook usage instructions
+- Updated README with improved value proposition and clearer feature descriptions
 
 ## [0.3.0] - 2025-11-08
 
