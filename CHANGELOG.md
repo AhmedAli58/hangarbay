@@ -26,7 +26,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - **New commands:**
   - `hangar fleet <owner>` - Find all aircraft owned by a person or company
-    - Case-insensitive search with wildcards
+    - Case-insensitive search with wildcards (automatic `%term%` wrapping)
+    - **OR logic**: Use pipe separator for multiple patterns: `"LAPD|Los Angeles Police"`
     - Displays summary statistics (count, manufacturers, status)
     - Shows aircraft list with N-numbers, make/model, year, location
     - Filter by state: `--state CA`

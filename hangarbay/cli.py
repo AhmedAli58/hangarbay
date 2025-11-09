@@ -497,10 +497,12 @@ def fleet(
 ):
     """Find all aircraft owned by a person or company.
     
-    Searches owner names case-insensitively. Use % as wildcard.
+    Searches owner names case-insensitively. Use | to search multiple patterns (OR logic).
     
     Examples:
       hangar fleet "United Airlines"
+      hangar fleet "LAPD|Los Angeles Police"      # Either pattern
+      hangar fleet "United|Delta|American"        # Any of the three
       hangar fleet "LAPD" --state CA
       hangar fleet "Boeing" --export boeing_fleet.csv
     """
@@ -517,7 +519,10 @@ def fleet(
     try:
         conn = duckdb.connect(str(database), read_only=True)
         
-        # Build query
+        # Split on pipe for OR logic
+        search_terms = [term.strip() for term in owner.split('|')]
+        
+        # Build query with multiple LIKE conditions for OR
         query = """
         SELECT 
             a.n_number,
@@ -530,10 +535,18 @@ def fleet(
             o.state
         FROM aircraft_decoded a
         JOIN owners_clean o ON a.n_number = o.n_number
-        WHERE LOWER(o.owner_name) LIKE LOWER(?)
+        WHERE (
         """
         
-        params = [f"%{owner}%"]
+        # Add LIKE condition for each search term
+        like_conditions = []
+        params = []
+        for term in search_terms:
+            like_conditions.append("LOWER(o.owner_name) LIKE LOWER(?)")
+            params.append(f"%{term}%")
+        
+        query += " OR ".join(like_conditions)
+        query += ")"
         
         # Add state filter if provided
         if state:
