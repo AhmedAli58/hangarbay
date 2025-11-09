@@ -1,0 +1,973 @@
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+AIRCRAFT REGISTRATION MASTER FILE
+Contains the records of all U.S. Civil Aircraft maintained by the FAA, Civil Aviation Registry, Aircraft
+Registration Branch, AFS-750
+The FAA has established a procedure in accordance with 49 U.S.C. § 44114(b) by which private aircraft
+owners can request certain personally identifiable information, such as names and addresses, be withheld
+from broad dissemination or display on a publicly available FAA website. Some records previously found
+on this page are not available at this time due to the implementation of these changes in public availability
+of information associated with registered aircraft.
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+N-Number 1-5 5 Identification number assigned to aircraft.
+Serial Number 7-36 30 The complete aircraft serial number
+assigned to the aircraft by the
+manufacturer.
+Aircraft Mfr Model
+Code
+38-44 7 A code assigned to the aircraft
+manufacturer, model and series.
+Positions (38-40) - Manufacturer Code
+Positions (41-42) - Model Code
+Positions (43-44) - Series Code
+Engine Mfr Mode Code 46-50 5 A code assigned to the engine
+manufacturer and model.
+Positions (46-48) - Manufacturer Code
+Positions (49-50) - Model Code
+Year Mfr 52-55 4 Year manufactured.
+Type Registrant 57 1 1 - Individual
+2 - Partnership
+3 - Corporation
+4 - Co-Owned
+5 – Government
+7 - LLC
+8 - Non Citizen Corporation
+9 - Non Citizen Co-Owned
+Registrant’s Name 59-108 50
+The first registrant’s name which appears
+on the Application for Registration, AC
+Form 8050-1.
+Street1 110-142 33 The street address which appears on the
+Application for Registration, AC Form
+8050-1 or the latest street address
+reported.
+Street2 144-176 33 The 2nd street address which appears on 
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+the Application for Registration, AC,
+Form 8050-1, or the latest street address
+reported.
+Registrant’s City 178-195 18 The city name which appears on the
+Application for Registration, AC Form
+8050-1 or the latest address reported.
+Registrant’s State 197-198 2 The state name which appears on the
+Application for Registration, AC Form
+8050-1 or the latest address reported.
+Registrant’s Zip Code 200-209 10 The postal Zip Code which appears on the
+Application for Registration, AC Form
+8050-1 or the latest address reported.
+Registrant’s Region 211 1 1 - Eastern
+2 - Southwestern
+3 - Central
+4 - Western-Pacific
+5 - Alaskan
+7 - Southern
+8 - European
+C- Great Lakes
+E - New England
+S - Northwest Mountain
+County Mail 213-215 3 A code representing the county which
+appears on the Application for
+Registration.
+Country Mail 217-218 2 A code representing the country which
+appears on the Application for
+Registration.
+Last Activity Date 220-227 8 Format YYYY/MM/DD
+Certificate Issue Date 229-236 8 Format YYYY/MM/DD
+Certification requested
+and uses:
+ A - Airworthiness
+ Classification Code
+238 1 The airworthiness certificate class which
+is reported on the Application for
+Airworthiness, FAA Form 8130-6.
+1 - Standard
+2 - Limited
+3 - Restricted
+4 - Experimental
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+5 - Provisional
+6 – Multiple
+7 - Primary
+8 - Special Flight Permit
+9 – Light Sport
+ B - Approved
+ Operation Codes
+239-247 9 The approved operations (up to a
+maximum of six) which are reported on
+the Application for Airworthiness, FAA
+Form 8130-6.
+ Standard 238 1
+239 1 Blank
+N - Normal
+U - Utility
+A - Acrobatic
+T - Transport
+G - Glider
+B - Balloon
+C - Commuter
+O - Other
+240-247 8 Positions are blank.
+ Limited 238 1
+239-247 9 Positions are blank.
+ Restricted 238 1
+239-245 7 May contain a code of 0-7.
+0 - Other
+1 - Agriculture and Pest Control
+2 - Aerial Surveying
+3 - Aerial Advertising
+4 - Forest
+5 - Patrolling
+6 - Weather Control
+7 - Carriage of Cargo
+246-247 2 Positions are blank
+ Experimental 238 1
+239-245 7 May contain a code of 0-9.
+0 - To show compliance with FAR
+1 - Research and Development
+2 - Amateur Built
+3 - Exhibition
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+4 - Racing
+5 - Crew Training
+6 - Market Survey
+7 - Operating Kit Built Aircraft
+8A - Reg. Prior to 01/31/08
+8B - Operating Light-Sport Kit-Built
+8C - Operating Light-Sport Previously
+ issued cert under 21.190
+9A - Unmanned Aircraft - Research and
+Development
+9B - Unmanned Aircraft - Market Survey
+9C - Unmanned Aircraft - Crew Training
+9D - Unmanned Aircraft – Exhibition
+9E - Unmanned Aircraft – Compliance
+ With CFR
+246-247 2 Positions are blank
+ Provisional 238 1
+239 1 1 - Class I
+2 - Class II
+240-247 8 Positions are blank
+ Multiple 238 1
+239-240 2 May contain a code of 1-3.
+1 - Standard
+2 - Limited
+3 - Restricted
+241-247 7 May be blank or contain:
+0 - Other
+1 - Agriculture and Pest Control
+2 - Aerial Surveying
+3 - Aerial Advertising
+4 - Forest
+5 - Patrolling
+6 - Weather Control
+7 - Carriage of Cargo
+ Primary 238 1
+239-247 9 Positions are blank
+ Special Flight
+ Permit
+238 1
+239-247 9 May contain a code of 1-6.
+1 - Ferry flight for repairs, alterations, 
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+maintenance or storage
+2 - Evacuate from area of impending
+danger
+3 - Operation in excess of maximum
+certificated
+4 - Delivery or export
+5 - Production flight testing
+6 - Customer Demo
+ Light Sport 238 1
+239 1 May contain a code of A-W.
+A - Airplane
+G - Glider
+L - Lighter than Air
+P - Power-Parachute
+W- Weight-Shift-Control
+240-247 8 Positions are blank
+Type Aircraft 249 1 1 - Glider
+2 - Balloon
+3 - Blimp/Dirigible
+4 - Fixed wing single engine
+5 - Fixed wing multi engine
+6 - Rotorcraft
+7 - Weight-shift-control
+8 - Powered Parachute
+9 - Gyroplane
+H - Hybrid Lift
+O - Other
+Type Engine 251-252 2 0 - None
+1 - Reciprocating
+2 - Turbo-prop
+3 - Turbo-shaft
+4 - Turbo-jet
+5 - Turbo-fan
+6 - Ramjet
+7 - 2 Cycle
+8 - 4 Cycle
+9 – Unknown
+10 – Electric
+11 - Rotary
+Status Code 254-255 2 A - The Triennial Aircraft Registration
+form was mailed and has not been
+returned by the Post Office
+D - Expired Dealer
+E - The Certificate of Aircraft 
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+Registration was revoked by
+enforcement action
+M - Valid - Aircraft assigned to the
+manufacturer under the
+manufacturer’s Dealer Certificate
+N - Non-citizen Corporations which
+have not returned their flight hour
+reports
+R - Registration pending
+S - Second Triennial Aircraft
+Registration Form has been mailed
+and has not been returned by the
+Post Office
+T - Valid Registration from a Trainee
+V - Valid Registration
+W- Certificate of Registration has been
+deemed Ineffective or Invalid
+X - Enforcement Letter
+Z - Permanent Reserved
+1 - Triennial Aircraft Registration form
+was returned by the Post Office as
+undeliverable
+2 - N-Number Assigned – but has not
+ yet been registered
+3 - N-Number assigned as a Non Type
+Certificated aircraft - but has not
+yet been registered
+4 - N-Number assigned as import -
+but has not yet been registered
+5 - Reserved N-Number
+6 - Administratively canceled
+7 - Sale reported
+8 - A second attempt has been made at
+mailing a Triennial Aircraft
+Registration form to the owner with
+no response
+9 - Certificate of Registration has been
+revoked
+10 - N-Number assigned, has not been
+registered and is pending
+cancellation
+11 - N-Number assigned as a Non Type
+Certificated (Amateur) but has not
+been registered that is pending
+cancellation
+12 - N-Number assigned as import but
+has not been registered that is
+pending cancellation
+13 - Registration Expired
+14 - First Notice for ReRegistration/Renewal
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+15 - Second Notice for ReRegistration/Renewal
+16 - Registration Expired – Pending
+Cancellation
+17 - Sale Reported – Pending
+Cancellation
+18 - Sale Reported – Canceled
+19 - Registration Pending – Pending
+Cancellation
+20 - Registration Pending – Canceled
+21 - Revoked – Pending Cancellation
+22 - Revoked – Canceled
+23 - Expired Dealer (Pending
+Cancellation)
+24 - Third Notice for ReRegistration/Renewal
+25 - First Notice for Registration
+Renewal
+26 - Second Notice for Registration
+Renewal
+27 - Registration Expired
+28 - Third Notice for Registration
+Renewal
+29 - Registration Expired – Pending
+Cancellation
+Mode S Code 257-264 8 Aircraft Transponder Code
+Fractional Ownership 266 1 Y - Registration has fractional ownership
+blank - Registration is not fractional
+owned
+Airworthiness Date 268-275 8 Date of Airworthiness
+Other Name 1 277-326 50 1st co-owner or partnership name
+Other Name 2 328-377 50 2nd co-owner or partnership name
+Other Name 3 379-428 50 3rd co-owner or partnership name
+Other Name 4 430-479 50 4th co-owner or partnership name
+Other Name 5 481-530 50 5TH co-owner or partnership name
+Expiration Date 532-539 8 Format YYYY/MM/DD
+Unique ID 541-548 8 Unique Identification Number
+Kit Mfr 550-579 30 Kit Manufacturer Name
+Kit Model 581-600 20 Kit Model Name
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+Mode S Code Hex 602-611 10 Mode S Code in Hexidecimal Format
+SEQUENCE N-Number (positions 1-5)
+RECORD LENGTH 612 characters (Record is comma delimited)
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+AIRCRAFT REFERENCE FILE
+The two reference files are required to identify the aircraft manufacturer/model/series codes and the engine
+manufacturer/model codes.
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+Aircraft Manufacturer,
+Model and Series Code
+1-7 7 A code assigned to the aircraft
+manufacturer, model and series.
+Positions (1-3) - Manufacturer Code
+Positions (4-5) - Model Code
+Positions (6-7) - Series Code
+Aircraft Manufacturer
+Name
+9-38 30 Name of the aircraft manufacturer.
+Model Name 40-59 20 Name of the aircraft model and series.
+Type Aircraft 61 1 1 - Glider
+2 - Balloon
+3 - Blimp/Dirigible
+4 - Fixed wing single engine
+5 - Fixed wing multi engine
+6 - Rotorcraft
+7 - Weight-shift-control
+8 - Powered Parachute
+9 - Gyroplane
+H - Hybrid Lift
+O - Other
+Type Engine 63-64 2 0 - None
+1 - Reciprocating
+2 - Turbo-prop
+3 - Turbo-shaft
+4 - Turbo-jet
+5 - Turbo-fan
+6 - Ramjet
+7 - 2 Cycle
+8 - 4 Cycle
+9 – Unknown
+10 – Electric
+11 - Rotary
+Aircraft Category Code 66 1 1 - Land
+2 - Sea
+3 - Amphibian
+Builder Certification
+Code
+68 1 0 – Type Certificated
+1 – Not Type Certificated
+2 – Light Sport
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Descriptions
+Number of Engines 70-71 2 Number of engines on the aircraft
+Number of Seats 73-75 3 Maximum number of seats in the aircraft.
+Aircraft Weight 77-83 7 Aircraft maximum gross take off weight
+in pounds.
+1 - Up to 12,499
+2 - 12,500 - 19,999
+3 - 20,000 and over.
+4 – UAV up to 55
+Aircraft Cruising Speed 85-88 4 Aircraft average cruising speed in miles
+per hour. This data element is not present
+on all records.
+TC Data Sheet 90-105 15 Type Certificate Data Sheet
+TC Data Holder 107-157 50 Type Certificate Data Holder
+SEQUENCE Aircraft Manufacturer/Model/Series Code
+RECORD LENGTH 158 characters (Record is comma delimited)
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+ENGINE REFERENCE FILE
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+Engine Manufacturer
+and Model Code
+1-5 5 A code assigned to the engine
+manufacturer and model.
+Positions (1-3) - Manufacturer Code
+Positions (4-5) - Model Code
+Engine Manufacturer
+Name
+7-16 10 The name of the engine manufacturer.
+Engine Model Name 18-30 13 The name of the engine model
+Type Engine 32-33 2 0 - None
+1 - Reciprocating
+2 - Turbo-prop
+3 - Turbo-shaft
+4 - Turbo-jet
+5 - Turbo-fan
+6 – Ramjet
+7 - 2 Cycle
+8 - 4 Cycle
+9 – Unknown
+10 – Electric
+11 - Rotary
+Engine Horsepower 35-39 5 Horsepower for engines types 1, 2, 3, 7, 8
+Pounds of Thrust 41-46 6 Thrust for engine types 4, 5, 6
+SEQUENCE Engine Manufacturer/Mode Code (positions 1-5)
+RECORD LENGTH 47 characters (Record is comma delimited)
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+AIRCRAFT DOCUMENT INDEX FILE
+Contains data on each document for recordation with the FAA Aircraft Registry and it is indexed by
+collateral identification (usually aircraft registration "N" number).
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+Type Collateral 1 1 1 - Aircraft
+2 - Engine
+3 - Propeller
+4 - Spare Parts
+5 - Document
+9 - Unidentified
+Collateral 3-39 37 Contents are based on type collateral
+code, as follows:
+1 - Aircraft N-Number
+2 - Engine Make, Model and Serial
+Number
+3 - Propeller Make, Model and Serial
+Number
+4 - Spare Parts Location
+5 - “DOC”, followed by recordation
+number
+9 - “UNIDENTIFIED” or a partial
+description of the document
+Name of Party 41-90 50 The FAA has established a procedure in
+accordance with 49 U.S.C. § 44114(b) by
+which private aircraft owners can request
+certain personally identifiable
+information, such as names and
+addresses, be withheld from broad
+dissemination or display on a publicly
+available FAA website. The Party Names
+previously found on this page are not
+available at this time due to the
+implementation of these changes in public
+availability of information associated
+with registered aircraft.
+Document ID 92-103 12 This is a unique number assigned to a
+document image.
+Document Receipt Date 105-112 8 Month, day and year document being
+indexed was filed for recordation with the
+Aircraft Registry. Recorded as
+YYYYMMDD.
+Processing Date 114-121 8 Date record was entered into file.
+YYMMDD format.
+Correction Date 123-130 8 Date of latest correction. Blank unless
+corrections have been made to record.
+YYYYMMDD format.
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+Correction Identification 132 1 Denotes if record has been added or
+corrected.
+A - Record was added
+C - Record was changed
+Serial Id 134-163 30 Serial Number for engine or propeller.
+Doc Type 165-167 3 Type of Document being indexed
+BOS – Evidence of Ownership
+S/A – Security Conveyance/Lien
+REL – Lien Release
+REP – Repossession
+CSC – Evidence of Ownership w/Lien
+DIS – Disclaimer
+CRT – Court Documents
+SEQUENCE Major: Type Collateral
+Minor: Collateral
+Minor: Date of Receipt
+Minor: Name of Party
+RECORD LENGTH 168 characters (Record is comma delimited)
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+RESERVE N-NUMBER FILE
+This file contains names and addresses of persons and/or companies who have reserved the Aircraft
+Registration N-number. File is in N-number sequence.
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+N-Number 1-5 5 N-Number
+Registrant 7-56 50 Reserving Party Name
+Street Address 58-90 33 The address of the reserving party.
+Street2 92-124 33 2nd street if applicable.
+City 126-143 18 City/Town name
+State 145-146 2 Two digit state code
+Zip Code 148-157 10 Postal zip code
+Reserve Date 159-166 8 Format YYYYMMDD
+Type Reservation 168-169 2 Two digit code take from Type
+Reservation.
+AA - Reserved - no fee
+A - Fee paid, notice for expiration sent
+HD - 2 year hold for canceled N-Numbers
+FN - Fee paid, notice for expiration sent
+FP - Fee paid
+MF - Reserved to manufacturer - no fee,
+no expiration date
+MT - Reserved to manufacturer -
+temporary number
+NC - N-Number change is in process
+NN - N-Number change is in process,
+expiration notice sent
+CN - N-Number change, Expire Notice
+Sent
+CE – N-Number change Expired
+Expiration Notice Date 171-178 8 Format YYYYMMDD
+N-Number for Change 180-184 5 Changed N-Number
+Purge Date 185-192 8 Format YYYYMMDD
+SEQUENCE N-Number
+RECORD 192 characters (Record is comma delimited)
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+AIRCRAFT DEALER APPLICANT FILE
+This file contains aircraft dealers and aircraft manufacturers who have made application for Dealer's
+Aircraft Registration Certificates. All records which exists on the AR Dealer Data Base File appear in this
+file.
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+Certificate Number 1-7 7 Format is ‘YY-NNNN’ where ‘YY’ is
+year. ‘NNNN’ is a unique four position
+numeric field with leading zeros.
+Ownership 9 1 One position numeric field. As follows:
+1 - Individual
+2 - Partnership
+3 - Corporation
+4 - Co-Ownership
+7 - LLC
+8 – Non Citizen Corporation
+Certificate Issue Date 11-18 8 Format is YYYYMMDD.
+Expiration Date 20-27 8 Format is YYYYMMDD.
+Expiration Flag 29 1 Contains ‘*’ for all expired records. An
+expired record remains on file for 90
+days.
+Cumulative Issue Count 31-34 4 Cumulative count of total Dealer’s
+Aircraft Registration Certificates issued
+for a Certificate Number.
+Name 36- 85 50 Aircraft Dealer’s Name.
+Street1 Address 87-119 33 Mailing street address for applicant.
+Street2 Address 121-153 33 2nd mailing street address for applicant.
+City 155-172 18 City of applicant.
+State 174-175 2 State or foreign country of applicant.
+Zip Code 177-186 10 Ten position alpha field or ‘FORGN’ for
+foreign countries.
+Other Names Count 188-189 2 Number of other names.
+Other Name 1 191-240 50 1st co-owner or partnership name
+Other Name 2 242-291 50 2nd co-owner or partnership name
+Other Name 3 293-342 50 3rd co-owner or partnership name
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+Other Name 4 344-393 50 4th co-owner or partnership name
+Other Name 5 395-444 50 5TH co-owner or partnership name
+Other Name 6 446-495 50 6th co-owner or partnership name
+Other Name 7 497-546 50 7th co-owner or partnership name
+Other Name 8 548-597 50 8th co-owner or partnership name
+Other Name 9 599-648 50 9th co-owner or partnership name
+Other Name 10 650-699 50 10th co-owner or partnership name
+Other Name 11 701-750 50 11th co-owner or partnership name
+Other Name 12 752-801 50 12th co-owner or partnership name
+Other Name 13 803-852 50 13th co-owner or partnership name
+Other Name 14 854-903 50 14th co-owner or partnership name
+Other Name 15 905-954 50 15TH co-owner or partnership name
+Other Name 16 956-1005 50 16th co-owner or partnership name
+Other Name 17 1007-1056 50 17th co-owner or partnership name
+Other Name 18 1058-1107 50 18th co-owner or partnership name
+Other Name 19 1109-1158 50 19th co-owner or partnership name
+Other Name 20 1160-1209 50 20th co-owner or partnership name
+Other Name 21 1211-1260 50 21st co-owner or partnership name
+Other Name 22 1262-1311 50 22nd co-owner or partnership name
+Other Name 23 1313-1362 50 23rd co-owner or partnership name
+Other Name 24 1364-1413 50 24th co-owner or partnership name
+Other Name 25 1415-1464 50 25th co-owner or partnership name
+SORT SEQUENCE: = N/A
+RECORD: = 1465 (Record is comma delimited)
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+AIRCRAFT DEREGISTERED FILE
+Contains the records of all U.S. Civil Aircraft Deregistered by the FAA, Civil Aviation Registry, Aircraft
+Registration Branch, AFS-750
+
+
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+N-Number 1 5 Identification number assigned to aircraft.
+Serial Number 7-36 30 The complete aircraft serial number
+assigned to the aircraft by the
+manufacturer.
+Aircraft Mfr Model
+Code
+38-44 7 A code assigned to the aircraft
+manufacturer, model and series.
+Positions (38-40) - Manufacturer Code
+Positions (41-42) - Model Code
+Positions (43-44) - Series Code
+Status Code 46 1 A - The Triennial Aircraft Registration
+form was mailed and has not been
+returned by the Post Office
+D - Expired Dealer
+E - The Certificate of Aircraft
+Registration was revoked by
+enforcement action
+M - Valid - Aircraft assigned to the
+manufacturer under the
+manufacturer’s Dealer Certificate
+N - Non-citizen Corporations which
+have not returned their flight hour
+reports
+R - Registration pending
+S - Second Triennial Aircraft
+Registration Form has been mailed
+and has not been returned by the
+Post Office
+T - Valid Registration from a Trainee
+V - Valid Registration
+W- Certificate of Registration has been
+deemed Ineffective or Invalid
+X - Enforcement Letter
+Z - Permanent Reserved
+1 - Triennial Aircraft Registration form
+was returned by the Post Office as
+undeliverable
+2 - N-Number Assigned – but has not
+ been Registered
+3 - N-Number assigned as amateurbuilt - but not yet registered
+4 - N-Number assigned as import -
+but not yet registered
+5 - Reserved N-Number
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+6 - Administratively canceled
+7 - Sale reported
+8 - A second attempt has been made at
+mailing a Triennial Aircraft
+Registration form to the owner with
+no response
+9 - Certificate of Registration has been
+revoked
+10 - N-Number assigned, has not been
+registered and is pending
+cancellation
+11 - N-Number assigned as a Non Type
+Certificated (Amateur) but has not
+been registered that is pending
+cancellation
+12 - N-Number assigned as import but
+has not been registered that is
+pending cancellation
+13 - Registration Expired
+14 - First Notice for ReRegistration/Renewal
+15 - Second Notice for ReRegistration/Renewal
+16 - Registration Expired – Pending
+Cancellation
+17 - Sale Reported – Pending
+Cancellation
+18 - Sale Reported – Canceled
+19 - Registration Pending – Pending
+Cancellation
+20 - Registration Pending – Canceled
+21 - Revoked – Pending Cancellation
+22 - Revoked – Canceled
+23 - Expired Dealer (Pending
+Cancellation)
+24 - Third Notice for ReRegistration/Renewal
+25 - First Notice for Registration
+Renewal
+26 - Second Notice for Registration
+Renewal
+27 - Registration Expired
+28 - Third Notice for Registration
+Renewal
+29 - Registration Expired – Pending
+Cancellation
+Registrant’s Name 48-97 50 The first registrant’s name which appears
+on the Application for Registration, AC
+Form 8050-1.
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+Street1 99- 131 33 The street address which appears on the
+Application for Registration, AC Form
+8050-1, or the latest street address
+reported.
+Street2 133-165 33 The 2nd street address which appears on
+the Application for Registration, AC
+Form 8050-1, or the latest street address
+reported .
+Registrant’s City 167-184 18 The city name which appears on the
+Application for Registration, AC Form
+8050-1 or the latest address reported.
+Registrant’s State 186-187 2 The state name which appears on the
+Application for Registration, AC Form
+8050-1 or the latest address reported.
+Registrant’s Zip Code 189-198 10 The postal Zip Code which appears on the
+Application for Registration, AC Form
+8050-1 or the latest address reported.
+Engine Mfr Mode Code 200-204 5 A code assigned to the engine
+manufacturer and model.
+Positions (200-202) - Manufacturer Code
+Positions (203-204) - Model Code
+Year Mfr 206-209 4 Year manufactured.
+Certification requested
+and uses:
+ A - Airworthiness
+ Classification Code
+211 1 The airworthiness certificate class which
+is reported on the Application for
+Airworthiness, FAA Form 8130-6.
+1 - Standard
+2 - Limited
+3 - Restricted
+4 - Experimental
+5 - Provisional
+6 – Multiple
+7 - Primary
+8 - Special Flight Permit
+9 – Light Sport
+ B - Approved
+ Operation Codes
+212-220 9 The approved operations (up to a
+maximum of six) which are reported on
+the Application for Airworthiness, FAA
+Form 8130-6.
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+ Standard 211 1
+212 1 Blank
+N - Normal
+U - Utility
+A - Acrobatic
+T - Transport
+G - Glider
+B - Balloon
+C - Commuter
+213-220 8 Positions are blank.
+ Limited 211 1
+212-220 9 Positions are blank.
+ Restricted 211 1
+212-218 7 May contain a code of 0-7.
+0 - Other
+1 - Agriculture and Pest Control
+2 - Aerial Surveying
+3 - Aerial Advertising
+4 - Forest
+5 - Patrolling
+6 - Weather Control
+7 - Carriage of Cargo
+219-220 2 Positions are blank
+ Experimental 211 1
+212-218 7 May contain a code of 0-7.
+0 - To show compliance with FAR
+1 - Research and Development
+2 - Amateur Built
+3 - Exhibition
+4 - Racing
+5 - Crew Training
+6 - Market Survey
+7 - Operating Kit Built Aircraft
+8A - Reg. Prior to 01/31/08
+8B - Operating Light-Sport Kit-Built
+8C - Operating Light-Sport Previously
+ issued cert under 21.190
+9A - Unmanned Aircraft - Research and
+Development
+9B - Unmanned Aircraft - Market Survey
+9C - Unmanned Aircraft - Crew Training
+9D - Unmanned Aircraft - Exhibition
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+9E - Unmanned Aircraft – Compliance
+ With CFR
+219-220 2 Positions are blank
+ Provisional 211 1
+212 1 1 - Class I
+2 - Class II
+213-220 8 Positions are blank
+ Multiple 211 1
+212-213 2 May contain a code of 1-3.
+1 - Standard
+2 - Limited
+3 - Restricted
+214-220 7 May be blank or contain:
+0 - Other
+1 - Agriculture and Pest Control
+2 - Aerial Surveying
+3 - Aerial Advertising
+4 - Forest
+5 - Patrolling
+6 - Weather Control
+7 - Carriage of Cargo
+ Special Flight
+ Permit
+211 1
+212-220 9 May contain a code of 1-6.
+1 - Ferry flight for repairs, alterations,
+maintenance or storage
+2 - Evacuate from area of impending
+danger
+3 - Operation in excess of maximum
+certificated
+4 - Delivery or export
+5 - Production flight testing
+6 - Customer Demo
+ Light Sport 211 1
+212 1 May contain a code of A-W.
+A - Airplane
+G - Glider
+L - Lighter than Air
+P - Power-Parachute
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+W- Weight-Shift-Control
+213-220 8 Positions are blank
+Registrant’s Region 222 1 1 - Eastern
+2 - Southwestern
+3 - Central
+4 - Western-Pacific
+5 - Alaskan
+7 - Southern
+8 - European
+C- Great Lakes
+E - New England
+S - Northwest Mountain
+County Mail 224-226 3 A code representing the county which
+appears on the Application for
+Registration.
+Country Mail 228-229 2 A code representing the country which
+appears on the Application for
+Registration.
+Airworthiness Date 231-238 8 Date of Airworthiness
+Cancel Date 240-247 8 Date of Cancelation
+Mode S Code 249-256 8 Aircraft Transponder Code
+Type Registration 258 1 1 = Individual
+2 = Partnership
+3 = Corporation
+4 = Co-Ownership
+5 = Government
+7 = LLC
+8 = Non-Citizen Corporation
+9 = Non-Citizen Co-Ownership
+Export Country 260-277 18 Country Name
+Last Activity Date 279-286 8 Format YYYY/MM/DD
+Certificate Issue Date 288-295 8 Format YYYY/MM/DD
+Physical Address 297-329 33 Physical Address of Registrant.
+2nd Physical Address 331-363 33 2nd Physical Address of Registrant.
+Physical City 365-382 18 City of Registrant.
+Physical State 384-385 2 State or foreign country of Registrant.
+5/8/2025 T:/ARS-DEV/ONLINE-SUPPORT/WEBFILES.DOC
+Element
+Position
+Location in
+Record
+Number of
+Positions Description
+Physical Zip Code 387-396 10 Ten position alpha field or ‘FORGN’ for
+foreign countries
+Physical County 398-400 3 A code representing the county which
+appears on the Application for
+Registration.
+Physical Country 402-403 2 A code representing the country which
+appears on the Application for
+Registration.
+Other Name 1 405-454 50 1st co-owner or partnership name
+Other Name 2 456-505 50 2nd co-owner or partnership name
+Other Name 3 507-556 50 3rd co-owner or partnership name
+Other Name 4 558-607 50 4th co-owner or partnership name
+Other Name 5 609-658 50 5TH co-owner or partnership name
+Kit Mfr 660-689 30 Kit Manufacturer Name
+Kit Model 691-709 20 Kit Model Name
+Mode S Code Hex 711-720 10 Mode S Code in Hexidecimal Format
+RECORD LENGTH 721 characters (Record is comma delimited)
