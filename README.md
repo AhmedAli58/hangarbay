@@ -27,7 +27,7 @@ make all
 hangar status
 
 # Start querying!
-hangar search N100
+hangar search N757AF
 hangar sql "SELECT COUNT(*) FROM aircraft"
 ```
 
