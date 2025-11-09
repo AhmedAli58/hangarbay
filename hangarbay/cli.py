@@ -569,36 +569,15 @@ def fleet(
             conn.close()
             return
         
-        # Show summary
-        console.print(f"\n[bold cyan]Fleet Summary: {owner}[/bold cyan]\n")
+        # Show header with total
+        console.print(f"\n[bold cyan]Fleet search: {owner}[/bold cyan]")
+        console.print(f"[dim]Found {len(result)} aircraft[/dim]\n")
         
-        from rich.table import Table
-        summary = Table(show_header=False, box=None)
-        summary.add_column("Metric", style="cyan")
-        summary.add_column("Value", style="white")
-        
-        summary.add_row("Total Aircraft", str(len(result)))
-        summary.add_row("Owner Name", result['owner_name'].iloc[0] if len(result) > 0 else "N/A")
-        
-        # Count by status
-        status_counts = result['reg_status'].value_counts()
-        if 'Valid' in status_counts:
-            summary.add_row("Valid Registrations", str(status_counts['Valid']))
-        
-        # Unique makers
-        unique_makers = result[result['maker'].notna()]['maker'].nunique()
-        if unique_makers > 0:
-            summary.add_row("Manufacturers", str(unique_makers))
-        
-        console.print(summary)
-        console.print()
-        
-        # Show aircraft list (limited for display)
-        console.print(f"[bold]Aircraft List[/bold]\n")
-        
+        # Show aircraft list
         from rich.table import Table
         table = Table(show_header=True, header_style="bold cyan")
         table.add_column("N-Number")
+        table.add_column("Owner")
         table.add_column("Make & Model")
         table.add_column("Year")
         table.add_column("Status")
@@ -607,6 +586,8 @@ def fleet(
         display_limit = 50
         for idx, row in result.head(display_limit).iterrows():
             n_num = f"N{row['n_number']}" if pd.notna(row['n_number']) else ""
+            
+            owner_name = str(row['owner_name']) if pd.notna(row['owner_name']) else ""
             
             make_model = []
             if pd.notna(row['maker']) and row['maker']:
@@ -625,14 +606,26 @@ def fleet(
                 location.append(str(row['state']))
             location_str = ", ".join(location) if location else ""
             
-            table.add_row(n_num, make_model_str, year, status, location_str)
+            table.add_row(n_num, owner_name, make_model_str, year, status, location_str)
         
         console.print(table)
         
         if len(result) > display_limit:
-            console.print(f"\n[dim]Showing first {display_limit} of {len(result)} aircraft (use --limit to control query size)[/dim]")
+            console.print(f"\n[dim]Showing first {display_limit} of {len(result)} aircraft[/dim]")
         
-        console.print(f"\n[dim]{len(result)} aircraft found[/dim]")
+        # Show summary stats after the table
+        console.print()
+        unique_owners = result['owner_name'].nunique()
+        if unique_owners > 1:
+            console.print(f"[cyan]Unique owners:[/cyan] {unique_owners}")
+        
+        status_counts = result['reg_status'].value_counts()
+        if 'Valid' in status_counts:
+            console.print(f"[cyan]Valid registrations:[/cyan] {status_counts['Valid']}")
+        
+        unique_makers = result[result['maker'].notna()]['maker'].nunique()
+        if unique_makers > 0:
+            console.print(f"[cyan]Manufacturers:[/cyan] {unique_makers}")
         
         if limit > 0 and len(result) == limit:
             console.print(f"[yellow]⚠ Results limited to {limit}. Use --limit 0 for all results.[/yellow]")
