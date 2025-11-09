@@ -89,7 +89,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Query performance**: Sub-second on 300K+ rows
 - **Total storage**: 203 MB (vs 275 MB raw)
 
-### Example Queries
+### Example queries
 ```sql
 -- Total aircraft
 SELECT COUNT(*) FROM aircraft;  -- 307,793
@@ -188,7 +188,7 @@ SELECT state_std, COUNT(*) FROM owners GROUP BY 1 ORDER BY 2 DESC LIMIT 5;
 - All tests passing (5/5)
 - CLI working and tested
 
-## Next Steps
+## Next steps
 1. Build normalize pipeline
    - Parse MASTER.txt to aircraft + registrations + owners tables
    - Join ACFTREF and ENGINE reference tables

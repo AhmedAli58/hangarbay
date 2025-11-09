@@ -1,10 +1,10 @@
-# Hangarbay Examples
+# Hangarbay examples
 
 Example notebooks demonstrating the Hangarbay Python API.
 
 ## Notebooks
 
-### [LAPD Fleet Analysis](lapd_fleet_analysis.ipynb)
+### [LAPD fleet analysis](lapd_fleet_analysis.ipynb)
 
 A comprehensive example showing how to:
 - Load FAA aircraft registry data
@@ -15,7 +15,7 @@ A comprehensive example showing how to:
 
 **Use case**: Analyzing municipal government aircraft fleets (police, fire departments)
 
-## Running the Notebooks
+## Running the notebooks
 
 1. **Install hangarbay:**
    ```bash
@@ -36,11 +36,11 @@ A comprehensive example showing how to:
 
 4. **Open a notebook** and run the cells!
 
-## Data Location
+## Data location
 
 All notebooks use data stored in `~/.hangarbay/data/` by default. The first time you run `hb.load_data()`, it will download ~400MB of FAA data. This is a one-time operation, and the data will be available to all notebooks.
 
-## Need Help?
+## Need help?
 
 - Check the [main README](../README.md) for full documentation
 - See the [API documentation](../hangarbay/api.py) for all available functions

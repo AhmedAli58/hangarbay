@@ -1,10 +1,10 @@
-# Current Status
+# Current status
 
 **Last Updated**: 2025-11-08  
 **Version**: 0.3.0  
 **Phase**: 🎉 **MVP COMPLETE!** All Core Features Working! 🎉
 
-## ✅ What Works Right Now
+## ✅ What works right now
 
 **Full pipeline from raw data to SQL queries:**
 
@@ -30,7 +30,7 @@ hangar sql "SELECT maker, COUNT(*) as count
 pytest tests/ -v  # ✅ 10/10 passing
 ```
 
-## 📊 Current Data
+## 📊 Current data
 
 **Raw files:**
 ```
@@ -63,7 +63,7 @@ data/publish/
 
 **Query Performance:** Sub-second on 300K+ rows!
 
-## 🎯 Optional Enhancements
+## 🎯 Optional enhancements
 
 The core pipeline is **complete and working**! Future additions:
 
@@ -76,7 +76,7 @@ The core pipeline is **complete and working**! Future additions:
 
 **But you can use it productively RIGHT NOW!** 🚀
 
-## 📝 Key Decisions Made
+## 📝 Key decisions made
 
 1. Project name: `hangarbay` (package) / `hangar` (CLI)
 2. FAA data comes as single ZIP, not individual files
@@ -84,7 +84,7 @@ The core pipeline is **complete and working**! Future additions:
 4. Schemas versioned in code, hashed in manifest
 5. Keep both raw and standardized address fields
 
-## 🔗 Useful Links
+## 🔗 Useful links
 
 - FAA Registry: https://registry.faa.gov/database/ReleasableAircraft.zip
 - Planning Doc: `FAA_registry_plan.md`

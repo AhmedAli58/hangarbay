@@ -12,7 +12,7 @@ A reproducible workflow for the FAA aircraft registry you can pick up after mont
 - Decided the shape of `owners_summary`
 - Listed additional anomaly scans
 
-## Implementation Status (as of 2025-11-09)
+## Implementation status (as of 2025-11-09)
 
 **✅ MVP COMPLETE (v0.3.0):**
 - Project scaffolding (pyproject.toml, Makefile, directory structure)
