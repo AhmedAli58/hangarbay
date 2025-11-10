@@ -44,14 +44,8 @@ print(f"Data is {info['age_days']} days old")
 ### Command-line interface
 
 ```bash
-# Clone and install
-git clone https://github.com/stiles/hangarbay.git
-cd hangarbay
-
-# Recommended: use a virtual environment (uv, venv, conda, etc.)
-uv venv && source .venv/bin/activate  # or: python -m venv .venv && source .venv/bin/activate
-
-pip install -e ".[dev]"
+# Install
+pip install hangarbay
 
 # Run the full pipeline (~2 minutes)
 hangar update     # Download, normalize and publish (all-in-one)
@@ -209,7 +203,14 @@ CLI / Python API
 
 ## Development
 
+To contribute or modify the code:
+
 ```bash
+# Clone and install for development
+git clone https://github.com/stiles/hangarbay.git
+cd hangarbay
+pip install -e ".[dev]"
+
 # Run tests
 make test
 
