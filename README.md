@@ -48,7 +48,7 @@ print(f"Data is {info['age_days']} days old")
 pip install hangarbay
 
 # Run the full pipeline (~2 minutes)
-hangar update     # Download, normalize and publish (all-in-one)
+hangar update     # Download, normalize and publish (in one step)
 
 # Or run steps individually
 hangar fetch      # Download FAA data
