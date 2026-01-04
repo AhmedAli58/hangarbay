@@ -23,6 +23,8 @@ aircraft_schema = pa.schema([
     ("reg_status", pa.string()),
     ("status_date", pa.date32()),
     ("reg_expiration", pa.date32()),
+    ("mode_s_code", pa.string()),
+    ("mode_s_code_hex", pa.string()),
     ("is_deregistered", pa.bool_()),
 ])
 
@@ -32,6 +34,7 @@ registrations_schema = pa.schema([
     ("reg_status", pa.string()),
     ("status_date", pa.date32()),
     ("reg_expiration", pa.date32()),
+    ("cert_issue_date", pa.date32()),
 ])
 
 owners_schema = pa.schema([

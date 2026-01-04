@@ -123,6 +123,10 @@ def parse_master_file(master_path: Path) -> tuple[pa.Table, pa.Table, pa.Table]:
     aircraft_df["status_date"] = pd.to_datetime(df["LAST ACTION DATE"], format="%Y%m%d", errors="coerce")
     aircraft_df["reg_expiration"] = pd.to_datetime(df["EXPIRATION DATE"], format="%Y%m%d", errors="coerce")
     
+    # Mode S transponder codes
+    aircraft_df["mode_s_code"] = df["MODE S CODE"].fillna("").astype(str).str.strip()
+    aircraft_df["mode_s_code_hex"] = df["MODE S CODE HEX"].fillna("").astype(str).str.strip()
+    
     aircraft_df["is_deregistered"] = False
     
     # Clean string fields
@@ -141,7 +145,7 @@ def parse_master_file(master_path: Path) -> tuple[pa.Table, pa.Table, pa.Table]:
     aircraft_df = aircraft_df[[
         "n_number", "serial_no", "mfr_mdl_code", "engine_code", "year_mfr",
         "airworthiness_class", "seats", "engines", "reg_status", "status_date",
-        "reg_expiration", "is_deregistered"
+        "reg_expiration", "mode_s_code", "mode_s_code_hex", "is_deregistered"
     ]]
     
     # Convert to Arrow and cast to schema
@@ -154,11 +158,11 @@ def parse_master_file(master_path: Path) -> tuple[pa.Table, pa.Table, pa.Table]:
     if not _quiet: console.print("[cyan]Building registrations table...[/cyan]")
     registrations_df = df[[
         "N-NUMBER", "CERTIFICATION", "STATUS CODE", 
-        "LAST ACTION DATE", "EXPIRATION DATE"
+        "LAST ACTION DATE", "EXPIRATION DATE", "CERT ISSUE DATE"
     ]].copy()
     
     registrations_df.columns = [
-        "n_number", "reg_type", "reg_status", "status_date", "reg_expiration"
+        "n_number", "reg_type", "reg_status", "status_date", "reg_expiration", "cert_issue_date"
     ]
     
     registrations_df["n_number"] = registrations_df["n_number"].fillna("").str.strip()
@@ -168,6 +172,7 @@ def parse_master_file(master_path: Path) -> tuple[pa.Table, pa.Table, pa.Table]:
     # Parse dates from YYYYMMDD format
     registrations_df["status_date"] = pd.to_datetime(registrations_df["status_date"], format="%Y%m%d", errors="coerce")
     registrations_df["reg_expiration"] = pd.to_datetime(registrations_df["reg_expiration"], format="%Y%m%d", errors="coerce")
+    registrations_df["cert_issue_date"] = pd.to_datetime(registrations_df["cert_issue_date"], format="%Y%m%d", errors="coerce")
     
     registrations_table = pa.Table.from_pandas(registrations_df, preserve_index=False)
     registrations_table = registrations_table.cast(registrations_schema, safe=False)

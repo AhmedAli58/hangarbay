@@ -171,11 +171,15 @@ def create_duckdb(publish_dir: Path, duckdb_path: Path) -> None:
             s.description as reg_status,
             a.status_date,
             a.reg_expiration,
+            r.cert_issue_date,
+            a.mode_s_code,
+            a.mode_s_code_hex,
             a.is_deregistered
         FROM aircraft a
         LEFT JOIN aircraft_make_model m ON a.mfr_mdl_code = m.mfr_mdl_code
         LEFT JOIN status_codes s ON a.reg_status = s.code
         LEFT JOIN airworthiness_classes ac ON a.airworthiness_class = ac.code
+        LEFT JOIN registrations r ON a.n_number = r.n_number
     """)
     
     conn.execute("""

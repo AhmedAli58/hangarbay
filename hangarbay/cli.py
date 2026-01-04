@@ -290,7 +290,10 @@ def search(
             a.reg_status,
             a.status_date,
             a.reg_expiration,
-            r.reg_type
+            r.reg_type,
+            r.cert_issue_date,
+            a.mode_s_code,
+            a.mode_s_code_hex
         FROM aircraft a
         LEFT JOIN aircraft_make_model m USING(mfr_mdl_code)
         LEFT JOIN registrations r USING(n_number)
@@ -307,7 +310,7 @@ def search(
         
         # Get owner info
         owner_query = """
-        SELECT owner_name_std, city_std, state_std
+        SELECT owner_name_std, address_all_std, city_std, state_std, zip5
         FROM owners
         WHERE UPPER(n_number) = ?
         LIMIT 1
@@ -436,8 +439,19 @@ def search(
             owner = owner_result.iloc[0]
             if pd.notna(owner['owner_name_std']):
                 console.print(f"[bold]Owner:[/bold] {owner['owner_name_std']}")
-            if pd.notna(owner['city_std']) and pd.notna(owner['state_std']):
-                console.print(f"[bold]Location:[/bold] {owner['city_std']}, {owner['state_std']}")
+            if pd.notna(owner['address_all_std']) and owner['address_all_std']:
+                console.print(f"[bold]Address:[/bold] {owner['address_all_std']}")
+            # Build location string with city, state, zip
+            location_parts = []
+            if pd.notna(owner['city_std']) and owner['city_std']:
+                location_parts.append(owner['city_std'])
+            if pd.notna(owner['state_std']) and owner['state_std']:
+                location_parts.append(owner['state_std'])
+            if location_parts:
+                location_str = ", ".join(location_parts)
+                if pd.notna(owner['zip5']) and owner['zip5']:
+                    location_str += f" {owner['zip5']}"
+                console.print(f"[bold]Location:[/bold] {location_str}")
             console.print()
         
         # Aircraft details table
@@ -472,11 +486,18 @@ def search(
             reg_text = reg_type_codes.get(reg_code, f"Code: {reg_code}")
             details.add_row("Certificate Type:", reg_text)
         
+        if pd.notna(row['cert_issue_date']):
+            details.add_row("Certificate Issue:", format_date(row['cert_issue_date']))
+        
         if pd.notna(row['status_date']):
             details.add_row("Status Date:", format_date(row['status_date']))
         
         if pd.notna(row['reg_expiration']):
             details.add_row("Expiration:", format_date(row['reg_expiration']))
+        
+        # Mode S transponder code
+        if pd.notna(row['mode_s_code_hex']) and row['mode_s_code_hex']:
+            details.add_row("Mode S Code:", str(row['mode_s_code_hex']))
         
         console.print(details)
         console.print()
